@@ -54,18 +54,14 @@ function createWorld() {
 	let numColors = parseInt($('#colors').val() );
 	let numCircles = parseInt($('#circles').val() );
 
-	// console.log(numColors-1);
-	// console.log('------');
-
 	let circles = [];
 	for(let i=0; i<numCircles; i++) {
 		let velocity = random(velAvg-velVar, velAvg+velVar);
 		let size = random(sizeAvg-sizeVar, sizeAvg+sizeVar);
 		let color = random(0, numColors-1);
 
-		// console.log(color);
-		console.log(colors[color]);
-		circles.push(getCircle(random(0,WIDTH), random(0,HEIGHT), size, velocity), colors[color]);
+
+		circles.push(getCircle(random(0,WIDTH), random(0,HEIGHT), size, velocity, colors[color]) );
 	}
 
 	World.add(engine.world, circles);
