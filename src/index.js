@@ -12,10 +12,12 @@ let Engine = Matter.Engine,
 
 let engine;
 
-let colors = ['#f66','#6f6','#66f'];
+let colors = '#f66 #6f6 #66f #ff6 #f6f #6ff'.split(' ');
 
 let WIDTH = 800;
 let HEIGHT = 600;
+
+let isFullscreen = false;
 
 window.onload = function() {
 
@@ -42,7 +44,47 @@ window.onload = function() {
 		createWorld();
 	});
 
+	$('#fullscreen').click(function() {
+		// todo: make it toggle
+
+		WIDTH = window.innerWidth;
+		HEIGHT = window.innerHeight;
+		render.canvas.width = WIDTH;
+		render.canvas.height = HEIGHT;
+
+		// createWorld();
+
+		isFullscreen = !isFullscreen;
+		toggleFullscreen();
+		$('#world').toggleClass('fullscreen');
+
+		if(isFullscreen) {
+			$('#fullscreen').css('z-index',99);
+		} else {
+			$('#fullscreen').css('z-index',1);
+		}
+
+
+	});
+
+	$(window).resize(function() {
+		if(!isFullscreen) {
+			WIDTH = 800;
+			HEIGHT = 600;
+		} else {
+			WIDTH = window.innerWidth;
+			HEIGHT = window.innerHeight;
+		}
+		render.canvas.width = WIDTH;
+		render.canvas.height = HEIGHT;
+
+		//todo: figure out how to change wrap pluggin max x and y
+
+	});
+
 }
+
+
 
 function createWorld() {
 	World.clear(engine.world);
@@ -113,4 +155,26 @@ function getCircle(x, y, r, v, color) {
 
 function random(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+//https://stackoverflow.com/questions/3900701/onclick-go-full-screen?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
+function toggleFullscreen() {
+  if ((document.fullScreenElement && document.fullScreenElement !== null) || 
+   (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+      document.documentElement.mozRequestFullScreen();  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }  
 }

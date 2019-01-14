@@ -14,3 +14,17 @@ img, button {
 @media (max-width: 768px) {
 
 }
+
+#world.fullscreen {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#fullscreen {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
