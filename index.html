@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Circle Screensaver</title>
+
+<meta charset="utf-8">
+<meta name="title=" content="Circle Screensaver">
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="a simple, customizable circle screensaver">
+<meta name="keywords" content="screensaver, wallpaper, background, circles">
+<meta name="theme-color" content="hsl(0, 0%, 90%)">
+<meta name="msapplication-navbutton-color" content="hsl(0, 0%, 90%)">
+<meta name="apple-mobile-web-app-status-bar-style" content="hsl(0, 0%, 90%)">
+
+<link rel="shortcut icon" href="../src/icon.png">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="main.js"></script>
+<link rel="stylesheet" href="../src/styles.css">
+
+</head>
+
+<body>
+	<canvas id="world"></canvas>
+
+	<br>
+	<input id="mouse" type="checkbox">
+	Mouse
+	<br>
+	<input id="circles" type="range" min="5" max="50" step="5" value="25">
+	Circles
+	<br>
+	<input id="vel-avg" type="range" min="0" max="5" step="1" value="2">
+	Velocity Average
+	<input id="vel-var" type="range" min="0" max="5" step="1" value="2">
+	Velocity Variance
+	<br>
+	<input id="size-avg" type="range" min="5" max="50" step="5" value="25">
+	Size Average
+	<input id="size-var" type="range" min="0" max="10" step="1" value="5">
+	Size Variance
+	<br>
+	<input id="colors" type="range" min="1" max="3" step="1" value="3">
+	Colors
+</body>
+</html>
