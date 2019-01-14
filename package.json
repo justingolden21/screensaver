@@ -1,0 +1,20 @@
+{
+  "name": "matter-test-3",
+  "version": "1.0.0",
+  "description": "simple demonstration of different abilities with matter.js. might be useful to beginners",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "matter-js": "^0.14.2",
+    "matter-wrap": "^0.2.0"
+  }
+}
