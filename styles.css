@@ -1,0 +1,30 @@
+img, button {
+	-webkit-user-select: none; /* Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+::-moz-selection {
+	background: hsl(0, 0%, 90%) !important;
+}
+::selection {
+	background: hsl(0, 0%, 90%) !important;
+}
+
+@media (max-width: 768px) {
+
+}
+
+#world.fullscreen {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#fullscreen {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
