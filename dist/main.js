@@ -126,7 +126,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./index.js */ \"./src/index.js\");\r\n__webpack_require__(/*! ./test.js */ \"./src/test.js\");\n\n//# sourceURL=webpack:///./src/entry.js?");
+eval("__webpack_require__(/*! ./util.js */ \"./src/util.js\");\r\n__webpack_require__(/*! ./index.js */ \"./src/index.js\");\r\n\n\n//# sourceURL=webpack:///./src/entry.js?");
 
 /***/ }),
 
@@ -142,14 +142,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var matt
 
 /***/ }),
 
-/***/ "./src/test.js":
+/***/ "./src/util.js":
 /*!*********************!*\
-  !*** ./src/test.js ***!
+  !*** ./src/util.js ***!
   \*********************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("console.log('testing');\n\n//# sourceURL=webpack:///./src/test.js?");
+eval("console.log('test3');\r\n\n\n//# sourceURL=webpack:///./src/util.js?");
 
 /***/ })
 
