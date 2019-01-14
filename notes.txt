@@ -1,0 +1,9 @@
+for updating the gh-pages branch:
+https://gist.github.com/cobyism/4730490
+
+commands for webpack:
+npm install --save PACKAGE-NAME
+npx webpack --mode=development
+npx webpack --mode=production
+
+edit the index.html in dist and everything else in src

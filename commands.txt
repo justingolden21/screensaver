@@ -1,3 +1,0 @@
-npm install --save PACKAGE-NAME
-npx webpack --mode=development
-npx webpack --mode=production
